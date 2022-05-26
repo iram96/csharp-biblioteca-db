@@ -2,15 +2,15 @@
 {
     internal class Documento
     {
-        public string Codice { get; set; }
+        public int Codice { get; set; }
         public string Titolo { get; set; }
-        public int Anno { get; set; }
+        //public int Anno { get; set; }
         public string Settore { get; set; }
         public Stato Stato { get; set; }
         public List<Autore> Autori { get; set; }
         public string Scaffale { get; set; }
 
-        public Documento(string Codice, string Titolo, int Anno, string Settore, string Scaffale)
+        public Documento(int Codice, string Titolo, string Settore, string Scaffale)
         {
             this.Codice = Codice;
             this.Titolo = Titolo;

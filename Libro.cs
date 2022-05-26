@@ -4,11 +4,11 @@
     {
         public int NumeroPagine { get; set; }
 
-        public Libro(string Codice, string Titolo, int Anno, string Settore, string Scaffale, int NumeroPagine) : base(Codice, Titolo, Anno, Settore, Scaffale)
+        public Libro(int Codice, string Titolo, string Settore, string Scaffale, int NumeroPagine) : base(Codice, Titolo, Settore, Scaffale)
         {
             this.NumeroPagine = NumeroPagine;
 
-            db.libroAdd(this);
+
         }
 
         public override string ToString()

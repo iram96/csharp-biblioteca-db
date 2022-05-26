@@ -32,6 +32,12 @@
 
 
             Biblioteca b = new Biblioteca("Civica");
+            List<Autore> lAutoriLibro = new List<Autore>();
+
+            Autore a3 = new Autore("Nome 3", "Cognome 3", "nd");
+            lAutoriLibro.Add(a3);
+            b.AggiungiLibro(3, "La grande cavalcata", "Avventura", "SS11", 200, lAutoriLibro);
+
 
 
             //b.AggiungiScaffale("SS11");
@@ -40,9 +46,8 @@
 
             b.Scaffali.ForEach(x => Console.WriteLine(x.Numero));
 
-            Libro l2 = new Libro("ISBN2", "Titolo 2", 2009, "Storia", "SS12", 130);
+            Libro l2 = new Libro(4324234, "Titolo 2", "Storia", "SS12", 130);
 
-            Autore a3 = new Autore("Nome 3", "Cognome 3");
             l2.Autori.Add(a3);
 
             Console.WriteLine("Lista Operazioni :");

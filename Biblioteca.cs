@@ -71,6 +71,14 @@
                 db.ScaffaleAdd(s1.Numero);
         }
 
+        public void AggiungiLibro(int iCodice, string sTitolo, string sSettore, string sScaffale, int iNumPagine, List<Autore> lListaAutori)
+        {
+            Libro MioLibro = new Libro(iCodice, sTitolo, sSettore, sScaffale, iNumPagine);
+            //MioLibro.Scaffale = new Scaffale("SS12");
+            MioLibro.Stato = Stato.Disponibile;
+            db.LibroAdd(MioLibro, lListaAutori);
+        }
+
         public int GestisciOperazioneBiblioteca(int codiceOperazione)
         {
             List<Documento> lResult;

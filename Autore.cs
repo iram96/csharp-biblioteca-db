@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace csharp_biblioteca_db
+﻿namespace csharp_biblioteca_db
 {
-    internal class Autore : Persona
+    class Autore : Persona
     {
-        public Autore(string Nome, string Cognome) : base(Nome, Cognome)
-        {
+        public string Mail;
+        public int CodiceAutore;
 
+        public Autore(string Nome, string Cognome, string Mail) : base(Nome, Cognome)
+        {
+            this.Mail = Mail;
+            this.CodiceAutore = GeneraCodiceAutore();
+        }
+
+        public int GeneraCodiceAutore()
+        {
+            return 1000 + this.Nome.Length + this.Cognome.Length + this.Mail.Length;
         }
     }
 }
